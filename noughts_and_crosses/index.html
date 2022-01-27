@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Solomon Bashir, 30014453">
+    <meta name="description" content="Noughts and Crosses game made using HTML5, CSS3 and JavaScript">
+    <title>Noughts and Crosses</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/gamelogo.ico"  >
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <!-- Home -->
+    <section class="home-menu" id="home-menu">
+        <h1 class="banner">X&O</h1>
+        <button id="play-button">Play</button>
+        <button id="settings-button">Settings</button>
+    </section>
+
+
+    <!-- Settings -->
+    <section id="settings-section">
+        <div class="settings-navigation">
+            <button class="back-button"><img src="images/back-button.png"></button>
+            <h2 class="settings-title">Settings</h2>
+        </div>
+        <div class="mode"><b>Game Mode:</b>
+            <select name="game-mode" id="game-mode">
+                <option value="multiplayer">2 Player</option>
+                <option value="computer">1 Player</option>
+            </select>
+        </div>
+        <div class="board-size"><b>Board Size:</b>
+            <select name="board-type" id="board-type">
+                <option value="3">3 x 3 </option>
+                <option value="4">4 x 4 </option>
+                <option value="5">5 x 5 </option>
+            </select>
+        </div>
+        <button class="save-button" onclick="generateGameBoard(); handleRestartGame(); chooseGameMode();">Save</button>
+    </section>
+
+    <!-- Gameplay area -->
+    <section id="main-game-section">
+        <div class="game-navigation">
+            <button class="back-button" id="game-back-button"><img src="images/back-button.png"></button>
+            <h1 class="game-title"> NOUGHTS AND CROSSES </h1>
+        </div>
+
+        <div class="score-card">
+            <h3 id="cross">X: <span id="X-score">0</span></h3>
+            <h3 id="nought">O: <span id="O-score">0</span></h3>
+        </div>
+        <div id="game-area">
+            <div class="game-board game-board-3by3">
+                <div class="cell cell-3by3" data-cell-index="0"></div>
+                <div class="cell cell-3by3" data-cell-index="1"></div>
+                <div class="cell cell-3by3" data-cell-index="2"></div>
+                <div class="cell cell-3by3" data-cell-index="3"></div>
+                <div class="cell cell-3by3" data-cell-index="4"></div>
+                <div class="cell cell-3by3" data-cell-index="5"></div>
+                <div class="cell cell-3by3" data-cell-index="6"></div>
+                <div class="cell cell-3by3" data-cell-index="7"></div>
+                <div class="cell cell-3by3" data-cell-index="8"></div>
+            </div>
+        </div>
+        <h2 class="gameplay-status"></h2>
+        <button class="restart-button">New Game</button>
+    </section>
+    <script src="js/app.js"></script>
+</body></html>
